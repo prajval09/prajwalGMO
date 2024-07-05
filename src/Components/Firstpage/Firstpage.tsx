@@ -1,35 +1,38 @@
-import React, { useState } from 'react'
-import { Container, Typography, TextField, Button, Snackbar } from '@mui/material';
-import {  useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Container, Typography, TextField, Button, Snackbar, Box } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+
 function Firstpage() {
-  const navigate=useNavigate()
-const [name, setName] = useState('');
+  const navigate = useNavigate();
+  const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [error, setError] = useState<string | null>(null);
 
   const handleFormSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    // Basic form validation
     if (!name || !phone || !email) {
       setError('Please fill out all fields.');
       return;
     }
-
-    // Save user details to local storage
+    if (!/^\d{10}$/.test(phone)) {
+      setError('Please enter a valid 10-digit phone number.');
+      return;
+    }
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      setError('Please enter a valid email address.');
+      return;
+    }
     localStorage.setItem('userDetails', JSON.stringify({ name, phone, email }));
-    navigate('/secondpage')
-    // Optionally, you can navigate to the second page here or set a state to indicate form submission
-    // For now, we'll just log the details to console
-    console.log({ name, phone, email });
+    navigate('/secondpage');
   };
 
   return (
-    <Container maxWidth="sm">
-      <Typography variant="h4" gutterBottom>
+    <Container maxWidth="sm" >
+      <Typography variant="h4" gutterBottom align='center'>
         Enter Your Details
       </Typography>
-      <form onSubmit={handleFormSubmit}>
+      <Box component="form" onSubmit={handleFormSubmit}>
         <TextField
           label="Name"
           variant="outlined"
@@ -54,17 +57,19 @@ const [name, setName] = useState('');
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <Button type="submit" variant="contained" color="primary">
-          Submit
-        </Button>
-      </form>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <Button type="submit" variant="contained" color="primary">
+            Submit
+          </Button>
+        </div>
+      </Box>
       <Snackbar open={!!error} autoHideDuration={6000} onClose={() => setError(null)}>
         <div style={{ color: 'white', backgroundColor: 'red', padding: '10px', borderRadius: '5px' }}>
           {error}
         </div>
       </Snackbar>
     </Container>
-  )
+  );
 }
 
-export default Firstpage
+export default Firstpage;
