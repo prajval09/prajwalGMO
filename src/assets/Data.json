@@ -1,0 +1,123 @@
+[
+    {
+        "department": "Agriculture & Fishing",
+        "sub_departments": [
+            "Agriculture",
+            "Crops",
+            "Farming Animals & Livestock",
+            "Fishery & Aquaculture",
+            "Ranching"
+        ]
+    },
+    {
+        "department": "Business Services",
+        "sub_departments": [
+            "Accounting & Accounting Services",
+            "Auctions",
+            "Business Services - General",
+            "Call Centers & Business Centers",
+            "Career Planning",
+            "Commercial Printing",
+            "Debt Collection"
+        ]
+    },
+    {
+        "department": "Construction",
+        "sub_departments": [
+            "Building Materials",
+            "Construction Services",
+            "Contractors",
+            "Demolition",
+            "Renovation & Repair"
+        ]
+    },
+    {
+        "department": "Education",
+        "sub_departments": [
+            "Colleges & Universities",
+            "Distance Learning",
+            "Primary & Secondary Schools",
+            "Tutoring",
+            "Vocational Training"
+        ]
+    },
+    {
+        "department": "Healthcare",
+        "sub_departments": [
+            "Clinics",
+            "Dentists",
+            "Hospitals",
+            "Pharmacies",
+            "Specialist Services"
+        ]
+    },
+    {
+        "department": "Hospitality",
+        "sub_departments": [
+            "Catering",
+            "Event Planning",
+            "Hotels",
+            "Restaurants",
+            "Travel & Tourism"
+        ]
+    },
+    {
+        "department": "Information Technology",
+        "sub_departments": [
+            "Cybersecurity",
+            "IT Services",
+            "Software Development",
+            "Technical Support",
+            "Web Development"
+        ]
+    },
+    {
+        "department": "Manufacturing",
+        "sub_departments": [
+            "Automotive",
+            "Consumer Goods",
+            "Electronics",
+            "Machinery",
+            "Textiles"
+        ]
+    },
+    {
+        "department": "Retail",
+        "sub_departments": [
+            "Clothing",
+            "Electronics",
+            "Furniture",
+            "Grocery",
+            "Online Stores"
+        ]
+    },
+    {
+        "department": "Transportation",
+        "sub_departments": [
+            "Airlines",
+            "Logistics",
+            "Public Transport",
+            "Shipping",
+            "Trucking"
+        ]
+    },
+    {
+        "department": "Utilities",
+        "sub_departments": [
+            "Electricity",
+            "Gas",
+            "Water",
+            "Waste Management"
+        ]
+    },
+    {
+        "department": "Finance",
+        "sub_departments": [
+            "Banking",
+            "Insurance",
+            "Investment",
+            "Loans",
+            "Wealth Management"
+        ]
+    }
+]
